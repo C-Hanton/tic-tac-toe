@@ -13,4 +13,7 @@ function Gameboard() {
             board[i].push(Cell());
         }
     }
+
+    // this is the method our UI ill use to get the board later
+    const getBoard = () => gameboard;
 }
