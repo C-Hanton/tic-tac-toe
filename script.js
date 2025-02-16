@@ -17,3 +17,12 @@ function Gameboard() {
     // this is the method our UI ill use to get the board later
     const getBoard = () => gameboard;
 }
+
+
+// gamecontroller will be responsible for cotnrolling flow of the game and detecting if anyone has won
+function GameController() {
+    playerOneName = "Player One";
+    playerTwoName = "Player Two";
+
+    const board = Gameboard()
+}
