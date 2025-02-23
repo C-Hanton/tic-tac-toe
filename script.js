@@ -1,5 +1,5 @@
 
-document.addEventListener("DOMContentLoaded", () => {
+
 // select the necessary html elements
 const board = document.getElementById("board");
 const statusText = document.getElementById("status");
@@ -53,7 +53,7 @@ function handleCellClick(event){
     }
 
     currentPlayer = currentPlayer === "X" ? "O" : "X";
-    statusText.textContent = `${currentPlayer}'s turn!`
+    statusText.textContent = `Player ${currentPlayer} 's turn!`
 }
 
 // checking for a Winner
@@ -74,6 +74,7 @@ resetButton.addEventListener("click", () => {
 });
 
 // initialize the game
-createBoard();
 
+document.addEventListener("DOMContentLoaded", () => {
+    createBoard();
 });
