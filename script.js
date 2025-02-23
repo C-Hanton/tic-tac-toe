@@ -54,3 +54,20 @@ function handleCellClick(event){
     currentPlayer = currentPlayer === "X" ? "O" : "X";
     statusText.textContent = `${currentPlayer}'s turn!`
 }
+
+// checking for a Winner
+function checkWinner(){
+    return winningCombinations.some(combination => { //Iterates over winningCombinations and checks if any of them have the same non-empty value.
+        const [a, b, c] = combination;
+        return gameState[a] && gameState[a] === gameState[b] && gameState[a] === gameState[c]; //If a combination matches, the function returns true.
+    })
+}
+
+//resetting the board
+resetButton.addEventListener("click", () => {
+    currentPlayer = "X";
+    gameState = ["", "", "", "", "", "", "", "", ""];
+    gameActive = true;
+    statusText.textContent = "Player X's turn";
+    createBoard();
+});
