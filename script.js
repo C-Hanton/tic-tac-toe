@@ -1,4 +1,5 @@
 
+document.addEventListener("DOMContentLoaded", () => {
 // select the necessary html elements
 const board = document.getElementById("board");
 const statusText = document.getElementById("status");
@@ -12,8 +13,8 @@ let gameActive = "true";
 // add winning combinations
 const winningCombinations = [
     [0, 1, 2], [3, 4, 5], [6, 7, 8], //rows
-    [0, 3, 6], [1, 4, 7], [2, 5, 8] // columns
-    [0, 4, 8], [2, 4, 7] //diagonals
+    [0, 3, 6], [1, 4, 7], [2, 5, 8], // columns
+    [0, 4, 8], [2, 4, 6] //diagonals
 ];
 //create the board
 function createBoard(){
@@ -25,7 +26,7 @@ function createBoard(){
         cell.dataset.index = index;
         cell.textContent = value;
         cell.addEventListener("click", handleCellClick);
-        board.appendChile(cell);
+        board.appendChild(cell);
     })
 }
 
@@ -74,3 +75,5 @@ resetButton.addEventListener("click", () => {
 
 // initialize the game
 createBoard();
+
+});
