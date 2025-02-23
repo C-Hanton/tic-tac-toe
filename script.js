@@ -1,5 +1,5 @@
 
-
+document.addEventListener("DOMContentLoaded", () => {
 // select the necessary html elements
 const board = document.getElementById("board");
 const statusText = document.getElementById("status");
@@ -75,6 +75,6 @@ resetButton.addEventListener("click", () => {
 
 // initialize the game
 
-document.addEventListener("DOMContentLoaded", () => {
+
     createBoard();
 });
