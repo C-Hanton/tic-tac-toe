@@ -71,3 +71,6 @@ resetButton.addEventListener("click", () => {
     statusText.textContent = "Player X's turn";
     createBoard();
 });
+
+// initialize the game
+createBoard();
