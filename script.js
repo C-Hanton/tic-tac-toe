@@ -28,3 +28,29 @@ function createBoard(){
         board.appendChile(cell);
     })
 }
+
+// handling user clicks
+function handleCellClick(event){
+    const index = event.target.dataset.index;
+    if(gameState(index) || !gameActive)
+        return;
+
+    gameState[index] = currentPlayer;
+    event.target.textContent = currentPlayer;
+    event.target.classList.add("taken");
+
+    if(checkWinner()){
+        statusText.textContent = `Player ${currentPlayer} wins!`;
+        gameActive = false;
+        return;
+    }
+
+    if(gameState.includes("")){
+        statusText.textContent = "It's a draw!"
+        gameActive = false;
+        return
+    }
+
+    currentPlayer = currentPlayer === "X" ? "O" : "X";
+    statusText.textContent = `${currentPlayer}'s turn!`
+}
