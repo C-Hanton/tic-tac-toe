@@ -46,7 +46,7 @@ function handleCellClick(event){
         return;
     }
 
-    if(gameState.includes("")){
+    if(!gameState.includes("")){
         statusText.textContent = "It's a draw!"
         gameActive = false;
         return
