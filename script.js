@@ -8,7 +8,7 @@ const resetButton = document.getElementById("reset");
 //set up games essential variables
 let currentPlayer = "X";
 let gameState = ["", "", "", "", "", "", "", "", ""]
-let gameActive = "true";
+let gameActive = true;
 
 // add winning combinations
 const winningCombinations = [
