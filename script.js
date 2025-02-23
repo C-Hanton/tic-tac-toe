@@ -33,7 +33,7 @@ function createBoard(){
 // handling user clicks
 function handleCellClick(event){
     const index = event.target.dataset.index;
-    if(gameState(index) || !gameActive)
+    if(gameState[index] || !gameActive)
         return;
 
     gameState[index] = currentPlayer;
